@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    user_data = request.form.get('text')
+    user_data = request.values.get('text')
     if user_data:
         return count_words_in_string(user_data)
     return '''<html>
