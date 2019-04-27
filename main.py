@@ -5,7 +5,7 @@ app = Flask(__name__)
 def hello():
     user_data = request.values.get('text')
     if user_data:
-        return count_words_in_string(user_data)
+        return '{}'.format(count_words_in_string(user_data))
     return '''<html>
     <body>
     <form>
