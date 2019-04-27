@@ -5,15 +5,19 @@ app = Flask(__name__)
 def hello():
     return "Hello Анастасия!"
 
- >>> st='01000E69B7D101000E69B7D101000E69B7D1'
->>> nl=''
->>> i=0
->>> while st.count(nl+st[i])>=3:
-...  nl+=st[i]
-...  i+=1
-... 
->>> nl
-'01000E69B7D1'
+<div class="form-data">
+        Name:<span id="name"></span>
+        Age:<span id="age"></span>
+    </div>
+    <form action="/" name="form">
+
+        <input type="text" name="name">
+
+        <input type="text" name="age">
+
+        <input type="submit" value="Submit">
+
+    </form>
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
